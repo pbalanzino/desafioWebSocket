@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="section-form">
+            <form onsubmit="return " id="form" class="form" method="post">
+                <p class="title"><b>Agregar Producto</b></p>
+                <label for="producto">Producto</label>
+                <input type="text" name="producto" id="producto" class="producto input">
+                <label for="precio">Precio</label>
+                <input type="text" name="precio" id="precio" class="precio input">
+                <label for="url">Foto URL</label>
+                <input type="text" name="url" id="url" class="url input">
+                <button type="submit" id="btn-form" class="btn-form">Agregar</button>
+            </form>
+            
+        </section>
+        <section class="section-table">
+            <p class="list-title"><b>Lista de Productos</b></p>
+            <table>
+                <thead>
+                    <th>Producto</th> 
+                    <th>Precio</th>
+                    <th>Foto</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Escuadra</td>
+                        <td>$123.45</td>
+                        <td>
+                            <img src="https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png" class="img-td">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="chat" class="chat">
+            <form action="" method="post" id="chatForm">
+                <p class="title-message"><b>Centro de Mensajes</b></p>
+                <input type="email" name="name" id="name-chat"  class="name-chat " placeholder="email">
+                <hr>
+                <p id="log"></p>
+                <input type="text" id="chatBox"     class="input-chat" placeholder="Ingresa un  mensaje...">
+                <input type="submit" id="btn-chat"  class="btn-chat" value="Enviar!">  
+            </form>
+        </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
